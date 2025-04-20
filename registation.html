@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration & Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-login button {
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .social-login button:hover {
+            background-color: #357ae8;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up / Login</h2>
+
+        <!-- Traditional Login Form -->
+        <form id="loginForm" method="POST">
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <div class="link">
+            <a href="#">Forgot Password?</a> | <a href="#">Create an Account</a>
+        </div>
+
+        <!-- Sign in with Google -->
+        <div class="social-login">
+            <!-- Add your Google OAuth button here -->
+            <button onclick="signInWithGoogle()">Sign in with Google</button>
+        </div>
+    </div>
+
+    <script>
+        // Placeholder for traditional login form submission
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            console.log('Logging in with:', username, password);
+            // Here, you would typically send a request to your server to authenticate the user
+        });
+
+        // Google Sign-In function (use your OAuth 2.0 client ID here)
+        function signInWithGoogle() {
+            // You need to integrate the Google Sign-In API for this to work
+            console.log('Google Sign-In clicked');
+            // Here you would initialize Google Sign-In, and handle the user authentication
+        }
+
+        // You need to include Google's API client script if you're using Google Sign-In
+        // Example script to include in your HTML (should be added inside the <head> tag):
+        // <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </script>
+
+</body>
+</html>

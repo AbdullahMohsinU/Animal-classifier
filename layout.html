@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Follow Mouse</title>
+    <style>
+        /* Basic styles for the body */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000; /* Black background */
+            overflow: hidden; /* Prevent scrolling */
+            cursor: pointer; /* Cursor pointer style */
+        }
+
+        /* Circle styling */
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent; /* Make circle background transparent */
+            border: 2px solid #fff; /* White border around the circle */
+            position: absolute;
+            pointer-events: none; /* Prevent circle from interfering with mouse events */
+            transition: transform 0.1s; /* Smooth follow effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+
+    <script>
+        const circle = document.querySelector('.circle');
+
+        // Move circle based on mouse position
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX - circle.offsetWidth / 2;  // Adjust to center the circle
+            const mouseY = e.clientY - circle.offsetHeight / 2; // Adjust to center the circle
+            circle.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+
+            // Set the image background inside the circle
+            circle.style.backgroundImage = `url('image.png')`; // Replace with the actual image path
+            circle.style.backgroundSize = 'cover'; // Make sure the image covers the circle
+            circle.style.backgroundPosition = 'center'; // Center the image inside the circle
+        });
+    </script>
+</body>
+</html>

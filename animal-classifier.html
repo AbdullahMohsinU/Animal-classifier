@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar with Cards and Preloader</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="image.png" alt="Loading...">
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#analyze">Analyze</a></li>
+                    <li><a href="#report">Report</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search...">
+                    <button id="search-button">Search</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="analyze">
+                <h2>Analyze Section</h2>
+                <div class="card">
+                    <h3>Analyze Data</h3>
+                    <p>This card could contain information or links to tools for data analysis.</p>
+                </div>
+            </section>
+
+            <section id="report">
+                <h2>Report Section</h2>
+                <div class="card">
+                    <h3>Create Report</h3>
+                    <p>This card could be used to display the options for generating reports.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
